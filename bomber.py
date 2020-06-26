@@ -19,8 +19,8 @@ parser.add_argument(
 parser.add_argument('--sms',
                     '-S',
                     type=int,
-                    help='Number of sms to target (default: 30)',
-                    default=30)
+                    help='Number of sms to target (default: 90000000)',
+                    default=90000000)
 parser.add_argument('--country',
                     '-c',
                     type=int,
@@ -105,7 +105,7 @@ def bomber(p):
     not args.verbose and not args.verify and print(
         f'Bombing : {success+failed}/{no_of_sms} | Success: {success} | Failed: {failed}',
         end='\r')
-    if args.proxy and (success + failed % 30 == 0):
+    if args.proxy and (success + failed % 90000000 == 0):
         proxies = get_proxy()
 
 
