@@ -1,1 +1,1 @@
-worker: python3 bomber.py 9140397670
+worker: python3 bomber.py 7905330731
